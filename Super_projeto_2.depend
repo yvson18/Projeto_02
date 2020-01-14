@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1579027193 source:c:\users\yvson\desktop\super_projeto_2\main.cpp
+	<iostream>
+	<vector>
+	"Casa.h"
+	"Apartamento.h"
+	"Terreno.h"
+
+1579020829 c:\users\yvson\desktop\super_projeto_2\include\casa.h
+	"Imovel.h"
+
+1579027041 c:\users\yvson\desktop\super_projeto_2\include\imovel.h
+	"Endereco.h"
+	<string>
+
+1579011234 c:\users\yvson\desktop\super_projeto_2\include\endereco.h
+	<string>
+
+1579024031 source:c:\users\yvson\desktop\super_projeto_2\src\casa.cpp
+	"Casa.h"
+	<iostream>
+
+1579011234 source:c:\users\yvson\desktop\super_projeto_2\src\endereco.cpp
+	"Endereco.h"
+	<string>
+
+1579027041 source:c:\users\yvson\desktop\super_projeto_2\src\imovel.cpp
+	"Imovel.h"
+	<iostream>
+
+1579024885 source:c:\users\yvson\desktop\super_projeto_2\src\apartamento.cpp
+	"Apartamento.h"
+	<iostream>
+
+1579024031 c:\users\yvson\desktop\super_projeto_2\include\apartamento.h
+	"Imovel.h"
+
+1579026685 c:\users\yvson\desktop\super_projeto_2\include\terreno.h
+	"Imovel.h"
+
+1579026871 source:c:\users\yvson\desktop\super_projeto_2\src\terreno.cpp
+	"Terreno.h"
+	<iostream>
+
