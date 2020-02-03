@@ -30,12 +30,6 @@ int main(){
 
     BancoDeDados b1;
     b1.lerArquivo();
-/*
 
-    for(int i = 0; i < imoveis.size(); i++){
-            imoveis[i]->exibir();
-        }
-
-*/
     return 0;
 }

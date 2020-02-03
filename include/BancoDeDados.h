@@ -17,7 +17,7 @@ class BancoDeDados{
         int numero();
 
         void salvarArquivo(std::vector <Imovel*> imoveis);
-        void lerArquivo();
+        std::vector <Imovel*> lerArquivo();
 };
 
 
