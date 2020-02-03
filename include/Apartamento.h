@@ -1,6 +1,7 @@
 #ifndef APARTAMENTO_H
 #define APARTAMENTO_H
 #include "Imovel.h"
+#include "BancoDeDados.h"
 
 class Apartamento : public Imovel{
 
@@ -14,6 +15,9 @@ class Apartamento : public Imovel{
                     int vagasGaragem,double area);
         void exibir()override;
         void editar()override;
+        std::string toString()override;
+
+        friend class BancoDeDados;
 
 };
 

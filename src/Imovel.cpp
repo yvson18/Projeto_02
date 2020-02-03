@@ -1,6 +1,7 @@
 #include "Imovel.h"
 #include <iostream>
 
+Imovel::Imovel(){}
 
 Imovel::Imovel(std::string titulo,Endereco endereco,double valor,
                bool AluguelouVenda,int tipoImovel){
@@ -167,3 +168,5 @@ bool Imovel::getAluguelouVenda(){
 int Imovel::getTipoImovel(){
     return this->tipoImovel;
 }
+
+std::string Imovel::toString(){/*vai ser overridado*/}

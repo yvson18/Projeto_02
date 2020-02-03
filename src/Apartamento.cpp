@@ -1,5 +1,7 @@
 #include "Apartamento.h"
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 Apartamento::Apartamento(std::string titulo,Endereco endereco,double valor,bool AluguelouVenda,
                          int tipoImovel,std::string posicao,int numQuartos,double valorCondominio,
@@ -24,16 +26,18 @@ void Apartamento::exibir(){
     }
 
 
-        std::cout<<"Titulo: " << titulo << "\n"
+       std::cout <<"Titulo: " << titulo << "\n"
                  <<"Categoria: "<< categoria <<"\n"
+                 <<"Logradouro: "<< endereco.getLogradouro() << "\n"
                  <<"Bairro: " << endereco.getBairro() << "\n"
-                 <<"Cidade: " << endereco.getCidade() << "\n"
+                 <<"Numero: " << endereco.getnumero() << "\n"
+                 <<"Cidade: " <<endereco.getCidade() << "\n"
                  <<"Valor: " << valor << "\n"
                  <<"Posicao: " << posicao << "\n"
                  <<"Numero de quartos: " << numQuartos << "\n"
                  <<"Valor do Condominio: "<< valorCondominio <<  "\n"
                  <<"Vagas da Garagem: " << vagasGaragem << "\n"
-                 <<"Area do apartamento: "<< area << "\n" << std::endl;
+                 <<"Area do apartamento: "<< area << std::endl;
 }
 
 void Apartamento::editar(){
@@ -206,7 +210,16 @@ void Apartamento::editar(){
         }while(editado == false);
 }
 
+std::string Apartamento::toString(){
 
+        std::stringstream buffer;
 
+        buffer << this->titulo << "\n" << this->endereco.getLogradouro() << "\n" <<
+        this->endereco.getnumero() << "\n" << this->endereco.getBairro() << "\n" <<
+        this->endereco.getCidade() << "\n" << this->endereco.getCep() << "\n"<< std::fixed <<
+        std::setprecision(2)<<this->valor << "\n" << this->AluguelouVenda << "\n" << this->tipoImovel <<"\n"<<
+        this->posicao << "\n" << this->numQuartos << "\n" << this->vagasGaragem << "\n"<<std::fixed<<
+        std::setprecision(2)<<this->valorCondominio << "\n" << this->area << "\n";
 
-
+        return buffer.str();
+}

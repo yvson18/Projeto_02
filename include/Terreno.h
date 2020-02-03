@@ -1,6 +1,7 @@
 #ifndef TERRENO_H
 #define TERRENO_H
 #include "Imovel.h"
+#include "BancoDeDados.h"
 
 class Terreno : public Imovel{
 
@@ -13,6 +14,9 @@ class Terreno : public Imovel{
 
         void exibir()override;
         void editar()override;
+        std::string toString()override;
+
+        friend class BancoDeDados;
 
 };
 

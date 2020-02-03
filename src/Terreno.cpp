@@ -1,5 +1,7 @@
 #include "Terreno.h"
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 
 Terreno::Terreno(std::string titulo,Endereco endereco,double valor,
                 bool AluguelouVenda,int tipoImovel,double area)
@@ -21,7 +23,9 @@ void Terreno::exibir(){
 
     std::cout <<"Titulo: " << titulo << "\n"
               <<"Categoria: "<< categoria <<"\n"
+              <<"Logradouro: "<< endereco.getLogradouro() << "\n"
               <<"Bairro: " << endereco.getBairro() << "\n"
+              <<"Numero: " << endereco.getnumero() << "\n"
               <<"Cidade: " <<endereco.getCidade() << "\n"
               <<"Valor: " << valor << "\n"
               <<"Area: " << area << std::endl;
@@ -158,10 +162,18 @@ void Terreno::editar(){
         }while(editado == false);
 }
 
+std::string Terreno::toString(){
 
+        std::stringstream buffer;
 
+        buffer << this->titulo << "\n" << this->endereco.getLogradouro() << "\n" <<
+        this->endereco.getnumero() << "\n" << this->endereco.getBairro() << "\n" <<
+        this->endereco.getCidade() << "\n" << this->endereco.getCep() << "\n"<< std::fixed <<
+        std::setprecision(2)<<this->valor << "\n" << this->AluguelouVenda << "\n" << this->tipoImovel <<"\n"<<
+        this->area << "\n";
 
+    return buffer.str();
 
-
+}
 
 

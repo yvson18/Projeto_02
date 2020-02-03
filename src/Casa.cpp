@@ -1,5 +1,9 @@
 #include "Casa.h"
 #include <iostream>
+#include <sstream>
+#include <iomanip>
+
+Casa::Casa(){}
 
 Casa::Casa(std::string titulo,Endereco endereco,double valor,bool AluguelouVenda,int tipoImovel,
              int numPavimentos,int numQuartos,double areaTerreno,double areaConstruida)
@@ -24,7 +28,9 @@ void Casa::exibir(){
 
     std::cout <<"Titulo: " << titulo << "\n"
               <<"Categoria: "<< categoria <<"\n"
+              <<"Logradouro: "<< endereco.getLogradouro() << "\n"
               <<"Bairro: " << endereco.getBairro() << "\n"
+              <<"Numero: " << endereco.getnumero() << "\n"
               <<"Cidade: " <<endereco.getCidade() << "\n"
               <<"Valor: " << valor << "\n"
               <<"Numero de Pavimentos: " << numPavimentos <<"\n"
@@ -189,3 +195,26 @@ void Casa::editar(){
 
         }while(editado == false);
 }
+
+std::string Casa::toString(){
+
+        std::stringstream buffer;
+
+        buffer << this->titulo << "\n" << this->endereco.getLogradouro() << "\n" <<
+        this->endereco.getnumero() << "\n" << this->endereco.getBairro() << "\n" <<
+        this->endereco.getCidade() << "\n" << this->endereco.getCep() << "\n"<< std::fixed <<
+        std::setprecision(2)<<this->valor << "\n" << this->AluguelouVenda << "\n" << this->tipoImovel <<"\n"<<
+        this->numPavimentos << "\n" << this->numQuartos << "\n"<< std::fixed << std::setprecision(2) <<
+        this->areaTerreno << "\n" << this->areaConstruida <<"\n";
+
+        return buffer.str();
+
+}
+
+
+
+
+
+
+
+

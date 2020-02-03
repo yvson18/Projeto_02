@@ -13,16 +13,19 @@ class Imovel
         int tipoImovel; // pode assumir 1 para Casa, 2 para Apartamento e 3 Para terreno
 
     public:
+        Imovel();
         Imovel(std::string titulo,Endereco endereco,double valor,bool AluguelouVenda,int tipoImovel);
         virtual void exibir();
         void exibirMinimo();
         virtual void editar();
+        virtual std::string toString();
 
         std::string getTitulo();
         bool getAluguelouVenda();
         Endereco getEndereco();
         double getValor();
         int getTipoImovel();
+
 
 
 };
