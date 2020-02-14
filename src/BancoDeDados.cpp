@@ -33,12 +33,7 @@ std::vector <Imovel*> BancoDeDados::lerArquivo(){
 
 std::vector <Imovel*> imoveisLidos = toStringtoVector(conteudo);
 
-    for(int i  = 0 ; i < imoveisLidos.size(); i++){
-        imoveisLidos[i]->exibir();
-    }
-
     return imoveisLidos;
-
 }
 
 std::vector <Imovel*> toStringtoVector(std::vector <std::string> conteudo){
@@ -48,7 +43,7 @@ std::vector <Imovel*> toStringtoVector(std::vector <std::string> conteudo){
     std::vector <Terreno*> terrenosLidos;
     std::vector <Apartamento*> apartamentosLidos;
 
-    int indice = 0,i = 0;
+    int indice = 0;
     bool verificarproximos = false;
 
     //std::cout << conteudo.size() << std::endl;
@@ -174,13 +169,6 @@ std::vector <Imovel*> toStringtoVector(std::vector <std::string> conteudo){
         for(int i = 0; i < terrenosLidos.size();i++){
             imoveisLidos.push_back(terrenosLidos[i]);
         }
-
-
-
-        for(int i  = 0; i < imoveisLidos.size(); i++){
-            imoveisLidos[i]->exibir();
-        }
-
 
 
         return imoveisLidos;

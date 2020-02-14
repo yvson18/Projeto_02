@@ -9,9 +9,10 @@ class SistemaImobiliaria
      std::vector <Imovel*> imoveis;
 
     public:
-        SistemaImobiliaria();
+        SistemaImobiliaria(std::vector <Imovel*> imoveis);
 
         void cadastraImovel(Imovel* imoveis);
+        void removerImovel(std::string);
         std::vector <Imovel*> getImovel();
 
 
