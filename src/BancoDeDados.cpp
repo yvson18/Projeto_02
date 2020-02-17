@@ -5,7 +5,7 @@
 
 void BancoDeDados::salvarArquivo(std::vector <Imovel*> imoveis){
 
-    std::ofstream ficheiroDeDadosSaida("imoveis.txt",std::ios::out|std::ios::app);
+    std::ofstream ficheiroDeDadosSaida("imoveis.txt",std::ios::out|std::ios::trunc);
 
         for(int i = 0 ; i < imoveis.size(); i++){
             ficheiroDeDadosSaida << imoveis[i]->toString();
@@ -75,7 +75,7 @@ std::vector <Imovel*> toStringtoVector(std::vector <std::string> conteudo){
 
 
                         if(atoi(conteudo[indice].c_str()) == 1){ // casa
-                            //std::cout << "casa" << std::endl;
+
                             Casa *c1 = new Casa(conteudo[indice-8],Endereco(conteudo[indice-7],atoi(conteudo[indice-6].c_str()),
                                          conteudo[indice-5],conteudo[indice-4],conteudo[indice-3]),atof(conteudo[indice-2].c_str()),
                                          atof(conteudo[indice-1].c_str()),atoi(conteudo[indice - 0].c_str()),atoi(conteudo[indice +1].c_str()),
@@ -83,11 +83,11 @@ std::vector <Imovel*> toStringtoVector(std::vector <std::string> conteudo){
 
 
                              casasLidas.push_back(c1);
-                             //std::cout << indice <<std :: endl;
+
                              indice += 5;
 
                         }else if(atoi(conteudo[indice].c_str()) == 2){
-                            //std::cout << "Apartamento" << std::endl;
+
                             Apartamento *ap1 = new Apartamento(conteudo[indice-8],Endereco(conteudo[indice-7],atoi(conteudo[indice-6].c_str()),
                                        conteudo[indice-5],conteudo[indice-4],conteudo[indice-3]),atof(conteudo[indice-2].c_str()),
                                        atoi(conteudo[indice-1].c_str()),atoi(conteudo[indice-0].c_str()),conteudo[indice+1],
@@ -95,22 +95,22 @@ std::vector <Imovel*> toStringtoVector(std::vector <std::string> conteudo){
                                        atof(conteudo[indice+5].c_str()));
 
                              apartamentosLidos.push_back(ap1);
-                             //std::cout << indice <<std :: endl;
+                             if(conteudo.size() == 15){break;}
                              indice += 6;
 
                         }else if(atoi(conteudo[indice].c_str()) == 3){
-                            //std::cout << "terreno" << std::endl;
+
                             Terreno *t1 = new Terreno(conteudo[indice-8],Endereco(conteudo[indice-7],atoi(conteudo[indice-6].c_str()),
                                        conteudo[indice-5],conteudo[indice-4],conteudo[indice-3]),atof(conteudo[indice-2].c_str()),
                                        atoi(conteudo[indice-1].c_str()),atoi(conteudo[indice-0].c_str()),atof(conteudo[indice+1].c_str()));
 
                             terrenosLidos.push_back(t1);
-                            //std::cout << indice <<std :: endl;
+
                             indice += 2;
                         }
 
                     verificarproximos = true;
-                    //std::cout << indice <<std :: endl;
+
 
                  }
 
@@ -122,7 +122,7 @@ std::vector <Imovel*> toStringtoVector(std::vector <std::string> conteudo){
                     indice += 8;
 
                          if(atoi(conteudo[indice].c_str()) == 1){
-                            //std::cout << "casa" << std::endl;
+
                                 Casa *c1 = new Casa(conteudo[indice-8],Endereco(conteudo[indice-7],atoi(conteudo[indice-6].c_str()),
                                          conteudo[indice-5],conteudo[indice-4],conteudo[indice-3]),atof(conteudo[indice-2].c_str()),
                                          atof(conteudo[indice-1].c_str()),atoi(conteudo[indice - 0].c_str()),atoi(conteudo[indice +1].c_str()),
@@ -130,10 +130,10 @@ std::vector <Imovel*> toStringtoVector(std::vector <std::string> conteudo){
 
                             casasLidas.push_back(c1);
                             indice += 5;
-                            //std::cout << indice <<std :: endl;
+
 
                           }else if(atoi(conteudo[indice].c_str()) == 2){
-                            //std::cout << "Apartamento" << std::endl;
+
                            Apartamento *ap1 = new Apartamento(conteudo[indice-8],Endereco(conteudo[indice-7],atoi(conteudo[indice-6].c_str()),
                                        conteudo[indice-5],conteudo[indice-4],conteudo[indice-3]),atof(conteudo[indice-2].c_str()),
                                        atoi(conteudo[indice-1].c_str()),atoi(conteudo[indice-0].c_str()),conteudo[indice+1],

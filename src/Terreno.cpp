@@ -29,6 +29,7 @@ void Terreno::exibir(){
               <<"Cidade: " <<endereco.getCidade() << "\n"
               <<"Valor: " << valor << "\n"
               <<"Area: " << area << std::endl;
+
 }
 
 void Terreno::editar(){

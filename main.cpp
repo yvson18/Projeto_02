@@ -7,6 +7,9 @@
 #include <stdlib.h>
 #include <windows.h>
 
+
+
+
 //headers
 #include "Casa.h"
 #include "Apartamento.h"
@@ -225,26 +228,50 @@ int main(){
         if(i == 3)
         {
             system("cls");
-            cout << "So quando marcos terminar, aquele homo, sexo, uau\n" << endl;
-            break;
+            imoveis = s1.BuscarImovel(); unsigned int contador;
+             if(imoveis.size() == 0){
+                cout << "Lista vazia\n" << endl;
+                Sleep(1000);
+                system("cls");
+            }
+            for(contador = 0; contador < imoveis.size(); contador ++)
+            {
+                cout << "\n";
+                imoveis[contador]->exibir();
+                cout << "\n" << endl;
+                Sleep(1000);
+            }
+            if(imoveis.size() != 0)
+            {
+                int int1;
+                cout << "Deseja fechar a lista?(Digite 1), se nao: (Digite 0)\n" << endl;
+                cin >> int1;
+                while(int1 > 1 || int1 < 0)
+                {
+                    cout << "Digite um numero valido!\n" << endl;
+                    cin >> int1;
+                }
+                while(int1 == 0)
+                {
+                    cout << "Deseja fechar a lista?(Digite 1), se nao: (Digite 0)\n" << endl;
+                    cin >> int1;
+                }
+                system("cls");
+            }
         }
+
         if(i == 4)
         {
             system("cls");
-            string titulo1;
             //----------------------------------------------------------------
-            cout << "Digite o titulo do imovel que quer deletar:\n" << endl;
-            cin.ignore();
-            getline(cin, titulo1);
-            //----------------------------------------------------------------
-            s1.removerImovel(titulo1);
+            s1.removerImovel();
             Sleep(2000);
         }
         if(i == 5)
         {
             system("cls");
-            cout << "So quando marcos terminar, aquele homo, sexo, uau\n" << endl;
-            break;
+            s1.editarImovel();
+            Sleep(1500);
         }
         if(i == 6)
         {
