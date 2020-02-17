@@ -1,23 +1,27 @@
-titulo
-logradouro
-10
-bairro
-cidade
-131313
-600.00
+Casa de herdeiro
+Rua comandante Matos Cardoso
+95
+Castelo Branco
+Joao Pessoa
+58050-120
+200000.00
 1
+1
+1
+4
+170.00
+160.00
+Apartamento massa
+Rua Esmeraldo Gomes Vieira
+95
+Bancarios
+Joao Pessoa
+58051-650
+1750000.00
 1
 2
+Sul
 3
-4.00
-5.00
-3
-3
-3
-3
-3
-33
-3.00
-0
-3
-3.00
+80
+1.00
+75.00

@@ -70,64 +70,64 @@
 	"Terreno.h"
 	"Apartamento.h"
 
-1581717696 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\apartamento.cpp
+1581899250 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\apartamento.cpp
 	"Apartamento.h"
 	<iostream>
 	<sstream>
 	<iomanip>
 
-1581717707 c:\users\jhona\downloads\projeto\projeto_02-master\include\apartamento.h
+1581899250 c:\users\jhona\downloads\projeto\projeto_02-master\include\apartamento.h
 	"Imovel.h"
 	"BancoDeDados.h"
 
-1581701754 c:\users\jhona\downloads\projeto\projeto_02-master\include\imovel.h
+1581899250 c:\users\jhona\downloads\projeto\projeto_02-master\include\imovel.h
 	"Endereco.h"
 	<string>
 
-1581701754 c:\users\jhona\downloads\projeto\projeto_02-master\include\endereco.h
+1581899250 c:\users\jhona\downloads\projeto\projeto_02-master\include\endereco.h
 	<string>
 
-1581701754 c:\users\jhona\downloads\projeto\projeto_02-master\include\bancodedados.h
+1581899250 c:\users\jhona\downloads\projeto\projeto_02-master\include\bancodedados.h
 	<iostream>
 	<vector>
 	<fstream>
 	<stdlib.h>
 	"Imovel.h"
 
-1581879702 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\bancodedados.cpp
+1581899250 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\bancodedados.cpp
 	"BancoDeDados.h"
 	"Casa.h"
 	"Terreno.h"
 	"Apartamento.h"
 
-1581717690 c:\users\jhona\downloads\projeto\projeto_02-master\include\casa.h
+1581899250 c:\users\jhona\downloads\projeto\projeto_02-master\include\casa.h
 	"Imovel.h"
 
-1581717706 c:\users\jhona\downloads\projeto\projeto_02-master\include\terreno.h
+1581899250 c:\users\jhona\downloads\projeto\projeto_02-master\include\terreno.h
 	"Imovel.h"
 	"BancoDeDados.h"
 
-1581717692 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\casa.cpp
+1581899250 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\casa.cpp
 	"Casa.h"
 	<iostream>
 	<sstream>
 	<iomanip>
 
-1581701754 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\endereco.cpp
+1581899250 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\endereco.cpp
 	"Endereco.h"
 	<string>
 
-1581701754 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\imovel.cpp
+1581899250 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\imovel.cpp
 	"Imovel.h"
 	<iostream>
 
-1581717694 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\terreno.cpp
+1581899250 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\terreno.cpp
 	"Terreno.h"
 	<iostream>
 	<sstream>
 	<iomanip>
 
-1581893763 source:c:\users\jhona\downloads\projeto\projeto_02-master\main.cpp
+1581899250 source:c:\users\jhona\downloads\projeto\projeto_02-master\main.cpp
 	<iostream>
 	<vector>
 	<string>
@@ -140,10 +140,11 @@
 	"BancoDeDados.h"
 	"SistemaImobiliaria.h"
 
-1581893763 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\sistemaimobiliaria.cpp
+1581904072 source:c:\users\jhona\downloads\projeto\projeto_02-master\src\sistemaimobiliaria.cpp
 	"SistemaImobiliaria.h"
+	"stringNosvy.h"
 
-1581893685 c:\users\jhona\downloads\projeto\projeto_02-master\include\sistemaimobiliaria.h
+1581903639 c:\users\jhona\downloads\projeto\projeto_02-master\include\sistemaimobiliaria.h
 	<vector>
 	<iostream>
 	<string>
@@ -309,4 +310,94 @@
 	<ctype.h>
 	<iostream>
 	<string>
+
+1581899250 c:\users\jhona\downloads\projeto\projeto_02-master\src\stringnosvy.h
+	<ctype.h>
+	<iostream>
+	<string>
+
+1581946941 source:c:\users\yvson\downloads\projeto_02-master\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"Casa.h"
+	"Apartamento.h"
+	"Terreno.h"
+	"BancoDeDados.h"
+	"SistemaImobiliaria.h"
+
+1581899250 c:\users\yvson\downloads\projeto_02-master\include\casa.h
+	"Imovel.h"
+
+1581899250 c:\users\yvson\downloads\projeto_02-master\include\imovel.h
+	"Endereco.h"
+	<string>
+
+1581899250 c:\users\yvson\downloads\projeto_02-master\include\endereco.h
+	<string>
+
+1581899250 c:\users\yvson\downloads\projeto_02-master\include\apartamento.h
+	"Imovel.h"
+	"BancoDeDados.h"
+
+1581899250 c:\users\yvson\downloads\projeto_02-master\include\bancodedados.h
+	<iostream>
+	<vector>
+	<fstream>
+	<stdlib.h>
+	"Imovel.h"
+
+1581899250 c:\users\yvson\downloads\projeto_02-master\include\terreno.h
+	"Imovel.h"
+	"BancoDeDados.h"
+
+1581903639 c:\users\yvson\downloads\projeto_02-master\include\sistemaimobiliaria.h
+	<vector>
+	<iostream>
+	<string>
+	"Imovel.h"
+
+1581946859 source:c:\users\yvson\downloads\projeto_02-master\src\apartamento.cpp
+	"Apartamento.h"
+	<iostream>
+	<sstream>
+	<iomanip>
+
+1581899250 source:c:\users\yvson\downloads\projeto_02-master\src\bancodedados.cpp
+	"BancoDeDados.h"
+	"Casa.h"
+	"Terreno.h"
+	"Apartamento.h"
+
+1581899250 source:c:\users\yvson\downloads\projeto_02-master\src\casa.cpp
+	"Casa.h"
+	<iostream>
+	<sstream>
+	<iomanip>
+
+1581899250 source:c:\users\yvson\downloads\projeto_02-master\src\endereco.cpp
+	"Endereco.h"
+	<string>
+
+1581899250 source:c:\users\yvson\downloads\projeto_02-master\src\imovel.cpp
+	"Imovel.h"
+	<iostream>
+
+1581904072 source:c:\users\yvson\downloads\projeto_02-master\src\sistemaimobiliaria.cpp
+	"SistemaImobiliaria.h"
+	"stringNosvy.h"
+
+1581899250 c:\users\yvson\downloads\projeto_02-master\src\stringnosvy.h
+	<ctype.h>
+	<iostream>
+	<string>
+
+1581899250 source:c:\users\yvson\downloads\projeto_02-master\src\terreno.cpp
+	"Terreno.h"
+	<iostream>
+	<sstream>
+	<iomanip>
 

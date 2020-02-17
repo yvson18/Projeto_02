@@ -41,6 +41,7 @@
 		<Unit filename="include/Imovel.h" />
 		<Unit filename="include/SistemaImobiliaria.h" />
 		<Unit filename="include/Terreno.h" />
+		<Unit filename="include/stringNosvy.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Apartamento.cpp" />
 		<Unit filename="src/BancoDeDados.cpp" />

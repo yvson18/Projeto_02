@@ -5,7 +5,7 @@
 //bibliotecas puramente estéticas
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>]
+#include <windows.h>
 
 //headers
 #include "Casa.h"
@@ -205,7 +205,7 @@ int main(){
 
                 if(tipoLista == 1){
                     for(int i = 0; i<imoveis.size(); i++){
-                        imoveis[i]->exibir();
+                        imoveis[i]->exibirMinimo();
                         cout << "\n\n";
                         Sleep(1000);
                     }
@@ -406,4 +406,3 @@ int main(){
     system("pause");
     return 0;
 }
-

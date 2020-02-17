@@ -12,30 +12,19 @@ SistemaImobiliaria::SistemaImobiliaria(std::vector <Imovel*> imoveis){
 std::vector <Imovel*> SistemaImobiliaria::getImovel(){
     return this->imoveis;
 }
-int SistemaImobiliaria::BuscarPorTitulo()
+std::vector <int> SistemaImobiliaria::BuscarIndice(std::string titulo1)
 {
-        unsigned int i; std::string titulo1; int j = -1;
-        std::cout << "Digite o titulo:\n" << std::endl;
-        std::cin.ignore();
-        std::getline(std::cin, titulo1);
-        for(i = 0; i < imoveis.size(); i++)
+    unsigned i = 0; std::vector <int> aux;
+    for(i = 0; i < imoveis.size(); i++)
         {
-            std::cout << buscaContida(titulo1,imoveis[i]->getTitulo());
-
-/*
-           if(buscaContida(titulo1,imoveis[i]->getTitulo()) == true)
+            if(buscaContida(titulo1,imoveis[i]->getTitulo()) == true)
             {
-                std::cout << "Entrei";
-                j = i;
-
+                aux.push_back(i);
             }
-
-
         }
-*/
-// eu acho que tu vai ter que alterar essa busca
-        return j;
+        return aux;
 }
+
 std::vector <Imovel*> SistemaImobiliaria::BuscarImovel()
 {
     int op, avaliador = 0; std::vector <Imovel*> indices;
@@ -101,6 +90,7 @@ std::vector <Imovel*> SistemaImobiliaria::BuscarImovel()
     {
         unsigned int i; double valor; int opc;
         std::cout << "Deseja procurar a partir de um certo valor, ou abaixo dele?(Digite 1), (Digite 0)\n" << std::endl;
+        std::cin >> opc;
         avaliador = 0;
         while(!avaliador)
         {
@@ -124,7 +114,7 @@ std::vector <Imovel*> SistemaImobiliaria::BuscarImovel()
             std::cin >> valor;
             for(i = 0; i < imoveis.size(); i++)
             {
-                if((imoveis[i]->getValor()) <= valor)
+                if((imoveis[i]->getValor()) >= valor)
                 {
                     indices.push_back(imoveis[i]);
                 }
@@ -136,7 +126,7 @@ std::vector <Imovel*> SistemaImobiliaria::BuscarImovel()
             std::cin >> valor;
             for(i = 0; i < imoveis.size(); i++)
             {
-                if((imoveis[i]->getValor()) >= valor)
+                if((imoveis[i]->getValor()) <= valor)
                 {
                     indices.push_back(imoveis[i]);
                 }
@@ -148,10 +138,26 @@ std::vector <Imovel*> SistemaImobiliaria::BuscarImovel()
 
 void SistemaImobiliaria::removerImovel()
 {
-    int encontrado;
-    encontrado = BuscarPorTitulo();
-    if(encontrado != -1){
-        imoveis.erase(imoveis.begin() + encontrado);
+    std::vector <Imovel*> imoveis01; int indice; unsigned int i; std::vector <int> aux;
+    imoveis01 = BuscarImovel();
+    for(i = 0; i < imoveis01.size(); i++)
+    {
+        std::cout << "\n\nImovel encontrado numero: " << i + 1 << "\n" << std::endl;
+        imoveis01[i]->exibir();
+    }
+    std::cout << "Qual deseja deletar? Digite de 1 a " << i << "\n" << std::endl;
+    std::cin >> indice;
+
+    while(indice < 1 || indice > i+1){
+        std::cout << "Digite um numero valido!\n" << std::endl;
+        std::cin >> indice;
+    }
+
+    aux = BuscarIndice(imoveis01[indice - 1]->getTitulo());
+
+    if(aux.size() != 0)
+    {
+        imoveis.erase(imoveis.begin() + aux[indice - 1]);
         std::cout << "Imovel Deletado\n" << std::endl;
     }else{
         std::cout << "Operacao falhou, repita a operacao!\n" << std::endl;
@@ -159,11 +165,30 @@ void SistemaImobiliaria::removerImovel()
 }
 void SistemaImobiliaria::editarImovel()
 {
-    int encontrado;
-    encontrado = BuscarPorTitulo();
-    if(encontrado != -1)
+    std::vector <Imovel*> imoveis01; int indice, op; unsigned int i; std::vector <int> aux;
+    imoveis01 = BuscarImovel();
+    for(i = 0; i < imoveis01.size(); i++)
     {
-        imoveis[encontrado]->editar();
+        std::cout << "\n\nImovel encontrado numero: " << i + 1 << "\n" << std::endl;
+        imoveis01[i]->exibir();
+    }
+
+    if(i>1){
+        std::cout << "Qual deseja editar? Digite de 1 a " << i << "\n" << std::endl;
+        std::cin >> indice;
+    }else if(i == 1){
+        indice = 1;
+    }
+
+    while(indice < 1 || indice > i+1){
+        std::cout << "Digite um numero valido!\n" << std::endl;
+        std::cin >> indice;
+    }
+    aux = BuscarIndice(imoveis01[indice - 1]->getTitulo());
+
+    if(aux.size() != 0)
+    {
+        imoveis[aux[indice - 1]]->editar();
         std::cout << "Operacao concluida\n" << std::endl;
     }else{
         std::cout << "Operacao falhou, repita a operacao!\n" << std::endl;

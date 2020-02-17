@@ -9,6 +9,7 @@ class SistemaImobiliaria
 {
     private:
      std::vector <Imovel*> imoveis;
+     std::vector <int> BuscarIndice(std::string);
 
     public:
         SistemaImobiliaria(std::vector <Imovel*> imoveis);
@@ -18,10 +19,6 @@ class SistemaImobiliaria
         void editarImovel();
         std::vector <Imovel*> getImovel();
         std::vector <Imovel*> BuscarImovel();
-        int BuscarPorTitulo();
-
-
-
 
 };
 

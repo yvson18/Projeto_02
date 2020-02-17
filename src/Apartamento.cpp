@@ -55,7 +55,10 @@ void Apartamento::editar(){
                    "Numero de quartos------------> 6\n" <<
                    "Valor do condominio----------> 7\n" <<
                    "Vagas da garagem-------------> 8\n" <<
-                   "Area do apartamento----------> 9\n" <<std::endl;
+                   "Area do apartamento----------> 9\n" <<
+                   "Cidade----------------------->10\n" <<
+                   "Logradouro------------------->11\n"<<
+                   "Numero----------------------->12\n"<<std::endl;
             std::cin >> op;
 
 
@@ -200,7 +203,6 @@ void Apartamento::editar(){
                 editado = true;
             }
             break;
-
             default:
                 std::cout << "Opcao invalida usuario\n";
                 editado = false;
