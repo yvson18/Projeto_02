@@ -1,27 +1,129 @@
+Casa legal
+Rua Exemplo 01
+99
+Mangabeira
+joao pessoa
+5555555-5
+1000.00
+1
+1
+6
+3
+60.00
+50.00
+casa legal 022
+Rua exemplo 94
+25
+bancarios
+mangabeira
+1231312-22
+888.00
+1
+1
+13131
+2312
+2332.00
+2321.00
 Casa de herdeiro
-Rua comandante Matos Cardoso
+Rua Comandante Matos Cardoso
 95
 Castelo Branco
 Joao Pessoa
 58050-120
-200000.00
-1
+250000.00
+0
 1
 1
 4
 170.00
-160.00
-Apartamento massa
+150.00
+Residencial Isaura Maria
+Rua Eliseu do Rego Luna
+10
+Bancarios
+Joao Pessoa
+4002-8922
+600.00
+1
+2
+Primeiro Andar
+2
+0
+1.00
+30.00
+Apartamento Legal
 Rua Esmeraldo Gomes Vieira
-95
+102
 Bancarios
 Joao Pessoa
 58051-650
-1750000.00
+175000.00
 1
 2
-Sul
+Nascente Sul
 3
-80
-1.00
+1
+80.00
 75.00
+Ap da hora
+Apartamento do Latino
+105
+Copacabana
+Manaus
+5698-587
+120000.00
+1
+2
+Nascente leste
+4
+1
+45.00
+65.00
+Apartamento de Konoha
+Rua Pastor Jonathas Barros Oliveira
+30
+Bancarios
+Joao Pessoa
+5698-787
+300000.00
+1
+2
+Nascente Oeste
+10
+500
+3.00
+100.00
+Apartamento do PEdro
+professora josefa de lorenco
+137
+PorTal Do SOL
+Joao Pessoa
+400000-37
+500000.00
+1
+2
+Nascente Oeste
+2
+1
+70.00
+30.00
+Terreno 00
+Rua exemplo 03
+777
+bairro 03
+porto alegre
+131313=2
+30000.00
+0
+3
+50.00
+Terreiro de Macumba
+Rua dos Pescadores de peixes terrestres
+120
+Como que o homem foi na lua
+A terra eh plana
+56012-569
+56000.00
+0
+3
+100.00

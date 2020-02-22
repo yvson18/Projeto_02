@@ -49,6 +49,11 @@ std::vector <Imovel*> SistemaImobiliaria::BuscarImovel()
         std::cout << "Digite o Bairro:\n" << std::endl;
         std::cin.ignore();
         std::getline(std::cin, bairro1);
+        while(!bairro1.compare("\0"))
+        {
+            std::cout << "Digite um bairro valido!\n" << std::endl;
+            std::getline(std::cin, bairro1);
+        }
         for(i = 0; i < imoveis.size(); i++)
         {
             if(buscaContida(bairro1,imoveis[i]->getEndereco().getBairro()) == true)
@@ -64,6 +69,11 @@ std::vector <Imovel*> SistemaImobiliaria::BuscarImovel()
         std::cout << "Digite a cidade:\n" << std::endl;
         std::cin.ignore();
         std::getline(std::cin, cidade1);
+        while(!cidade1.compare("\0"))
+        {
+            std::cout << "Digite um bairro valido!\n" << std::endl;
+            std::getline(std::cin, cidade1);
+        }
         for(i = 0; i < imoveis.size(); i++)
         {
             if(buscaContida(cidade1,imoveis[i]->getEndereco().getCidade()) == true)
@@ -78,6 +88,11 @@ std::vector <Imovel*> SistemaImobiliaria::BuscarImovel()
         std::cout << "Digite o titulo:\n" << std::endl;
         std::cin.ignore();
         std::getline(std::cin, titulo1);
+        while(!titulo1.compare("\0"))
+        {
+            std::cout << "Digite um bairro valido!\n" << std::endl;
+            std::getline(std::cin, titulo1);
+        }
         for(i = 0; i < imoveis.size(); i++)
         {
             if(buscaContida(titulo1,imoveis[i]->getTitulo()) == true)
@@ -138,29 +153,34 @@ std::vector <Imovel*> SistemaImobiliaria::BuscarImovel()
 
 void SistemaImobiliaria::removerImovel()
 {
-    std::vector <Imovel*> imoveis01; int indice; unsigned int i; std::vector <int> aux;
+    std::vector <Imovel*> imoveis01; int indice, in; unsigned int i; std::vector <int> aux;
     imoveis01 = BuscarImovel();
     for(i = 0; i < imoveis01.size(); i++)
     {
         std::cout << "\n\nImovel encontrado numero: " << i + 1 << "\n" << std::endl;
         imoveis01[i]->exibir();
+        Sleep(1000);
     }
-    std::cout << "Qual deseja deletar? Digite de 1 a " << i << "\n" << std::endl;
-    std::cin >> indice;
-
-    while(indice < 1 || indice > i+1){
-        std::cout << "Digite um numero valido!\n" << std::endl;
+    if(imoveis01.size() != 0){
+        std::cout << "Qual deseja deletar? Digite de 1 a " << i << "\n" << std::endl;
         std::cin >> indice;
-    }
 
-    aux = BuscarIndice(imoveis01[indice - 1]->getTitulo());
+        while(indice < 1 || indice > i+1){
+            std::cout << "Digite um numero valido!\n" << std::endl;
+            std::cin >> indice;
+        }
+        in = indice - 1;
+        aux = BuscarIndice(imoveis01[indice - 1]->getTitulo());
 
-    if(aux.size() != 0)
-    {
-        imoveis.erase(imoveis.begin() + aux[indice - 1]);
-        std::cout << "Imovel Deletado\n" << std::endl;
+        if(aux.size() != 0)
+        {
+            imoveis.erase(imoveis.begin() + aux[in]);
+            std::cout << "Imovel Deletado\n" << std::endl;
+        }else{
+            std::cout << "Operacao falhou, repita a operacao!\n" << std::endl;
+        }
     }else{
-        std::cout << "Operacao falhou, repita a operacao!\n" << std::endl;
+        std::cout << "Lista Vazia\n" << std::endl;
     }
 }
 void SistemaImobiliaria::editarImovel()
@@ -171,26 +191,30 @@ void SistemaImobiliaria::editarImovel()
     {
         std::cout << "\n\nImovel encontrado numero: " << i + 1 << "\n" << std::endl;
         imoveis01[i]->exibir();
+        Sleep(1000);
     }
+    if(imoveis01.size() != 0){
+        if(i>1){
+            std::cout << "Qual deseja editar? Digite de 1 a " << i << "\n" << std::endl;
+            std::cin >> indice;
+        }else if(i == 1){
+            indice = 1;
+        }
 
-    if(i>1){
-        std::cout << "Qual deseja editar? Digite de 1 a " << i << "\n" << std::endl;
-        std::cin >> indice;
-    }else if(i == 1){
-        indice = 1;
-    }
+        while(indice < 1 || indice > i+1){
+            std::cout << "Digite um numero valido!\n" << std::endl;
+            std::cin >> indice;
+        }
+        aux = BuscarIndice(imoveis01[indice - 1]->getTitulo());
 
-    while(indice < 1 || indice > i+1){
-        std::cout << "Digite um numero valido!\n" << std::endl;
-        std::cin >> indice;
-    }
-    aux = BuscarIndice(imoveis01[indice - 1]->getTitulo());
-
-    if(aux.size() != 0)
-    {
-        imoveis[aux[indice - 1]]->editar();
-        std::cout << "Operacao concluida\n" << std::endl;
+        if(aux.size() != 0)
+        {
+            imoveis[aux[indice - 1]]->editar();
+            std::cout << "Operacao concluida\n" << std::endl;
+        }else{
+            std::cout << "Operacao falhou, repita a operacao!\n" << std::endl;
+        }
     }else{
-        std::cout << "Operacao falhou, repita a operacao!\n" << std::endl;
+        std::cout << "Lista Vazia\n" << std::endl;
     }
 }
